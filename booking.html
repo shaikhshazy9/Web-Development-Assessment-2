@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etihad Airways - Book Now</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="etihad-airways-logo.png" alt="Etihad Airways Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Book Now</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="page-banner" style="background-image: url('background\ eti.jpg');">
+        <div class="banner-content">
+            <h1>Book Your Flight</h1>
+            <p>Start your journey with Etihad Airways</p>
+        </div>
+    </section>
+
+    <!-- Booking section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <div class="booking-tabs">
+                    <button class="booking-tab active" data-tab="flights">Flights</button>
+                    <button class="booking-tab" data-tab="hotels">Hotels</button>
+                    <button class="booking-tab" data-tab="cars">Cars</button>
+                    <button class="booking-tab" data-tab="packages">Packages</button>
+                </div>
+                
+                <!-- Flight booking form -->
+                <div class="booking-content active" id="flights-content">
+                    <form class="booking-form">
+                        <div class="trip-type">
+                            <div class="trip-option">
+                                <input type="radio" id="round-trip" name="trip-type" value="round-trip" checked>
+                                <label for="round-trip">Round Trip</label>
+                            </div>
+                            <div class="trip-option">
+                                <input type="radio" id="one-way" name="trip-type" value="one-way">
+                                <label for="one-way">One Way</label>
+                            </div>
+                            <div class="trip-option">
+                                <input type="radio" id="multi-city" name="trip-type" value="multi-city">
+                                <label for="multi-city">Multi City</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure">Departure Airport</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                    <input type="text" id="departure" placeholder="City or Airport">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="arrival">Arrival Airport</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-plane-arrival"></i>
+                                    <input type="text" id="arrival" placeholder="City or Airport">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="depart-date">Departure Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="depart-date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="return-date">Return Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="return-date">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cabin-class">Cabin Class</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-chair"></i>
+                                    <select id="cabin-class">
+                                        <option value="economy">Economy</option>
+                                        <option value="business">Business</option>
+                                        <option value="first">First</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Passengers</label>
+                                <div class="passenger-selector">
+                                    <div class="passenger-type">
+                                        <span>Children</span>
+                                        <div class="quantity-selector">
+                                            <button type="button" class="quantity-btn minus">-</button>
+                                            <input type="number" value="0" min="0" max="9">
+                                            <button type="button" class="quantity-btn plus">+</button>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-type">
+                                        <span>Infants</span>
+                                        <div class="quantity-selector">
+                                            <button type="button" class="quantity-btn minus">-</button>
+                                            <input type="number" value="0" min="0" max="4">
+                                            <button type="button" class="quantity-btn plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row promotions">
+                            <div class="form-group">
+                                <label for="promo-code">Promo Code</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-tag"></i>
+                                    <input type="text" id="promo-code" placeholder="Enter code if available">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="flexible-dates">
+                                    <label for="flexible-dates">Flexible dates +/- 3 days</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="use-miles">
+                                    <label for="use-miles">Use Etihad Guest Miles</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Search Flights</button>
+                            <button type="reset" class="btn-outline">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Hotel booking form -->
+                <div class="booking-content" id="hotels-content">
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="hotel-destination">Destination</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="hotel-destination" placeholder="City or Hotel name">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="check-in">Check-in Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="check-in">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="check-out">Check-out Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="check-out">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rooms">Rooms</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-door-open"></i>
+                                    <select id="rooms">
+                                        <option value="1">1 Room</option>
+                                        <option value="2">2 Rooms</option>
+                                        <option value="3">3 Rooms</option>
+                                        <option value="4">4 Rooms</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hotel-guests">Guests</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-user-friends"></i>
+                                    <select id="hotel-guests">
+                                        <option value="1">1 Guest</option>
+                                        <option value="2" selected>2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="more">5+ Guests</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Search Hotels</button>
+                            <button type="reset" class="btn-outline">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Car rental form -->
+                <div class="booking-content" id="cars-content">
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-pickup">Pick-up Location</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="car-pickup" placeholder="City or Airport">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-dropoff">Drop-off Location</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <input type="text" id="car-dropoff" placeholder="City or Airport">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickup-date">Pick-up Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="pickup-date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dropoff-date">Drop-off Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="dropoff-date">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-type">Car Type</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-car"></i>
+                                    <select id="car-type">
+                                        <option value="economy">Economy</option>
+                                        <option value="compact">Compact</option>
+                                        <option value="midsize">Midsize</option>
+                                        <option value="fullsize">Full Size</option>
+                                        <option value="suv">SUV</option>
+                                        <option value="luxury">Luxury</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="driver-age">Driver's Age</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-id-card"></i>
+                                    <select id="driver-age">
+                                        <option value="25+">25+ years</option>
+                                        <option value="21-24">21-24 years</option>
+                                        <option value="18-20">18-20 years</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Search Cars</button>
+                            <button type="reset" class="btn-outline">Reset</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Package booking form -->
+                <div class="booking-content" id="packages-content">
+                    <form class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="package-departure">Departure From</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-plane-departure"></i>
+                                    <input type="text" id="package-departure" placeholder="City or Airport">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="package-destination">Destination</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-plane-arrival"></i>
+                                    <input type="text" id="package-destination" placeholder="City or Resort">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="package-start">Departure Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="package-start">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="package-end">Return Date</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <input type="date" id="package-end">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="package-travelers">Travelers</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-users"></i>
+                                    <select id="package-travelers">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2" selected>2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                        <option value="family">Family Options</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="package-type">Package Type</label>
+                                <div class="input-icon">
+                                    <i class="fas fa-suitcase"></i>
+                                    <select id="package-type">
+                                        <option value="flight-hotel">Flight + Hotel</option>
+                                        <option value="flight-hotel-car">Flight + Hotel + Car</option>
+                                        <option value="all-inclusive">All-Inclusive Resort</option>
+                                        <option value="cruise">Cruise Package</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Search Packages</button>
+                            <button type="reset" class="btn-outline">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Booking features -->
+            <div class="booking-features">
+                <h2>Why Book Directly with Etihad Airways?</h2>
+                <div class="feature-container">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Best Price Guarantee</h3>
+                        <p>Find a lower fare elsewhere? We'll refund the difference plus give you a discount voucher for your next trip.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Earn Etihad Guest Miles</h3>
+                        <p>Earn miles on every booking and redeem them for flights, upgrades, and exclusive rewards.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Booking</h3>
+                        <p>Book with confidence knowing your payment and personal information are protected by industry-leading security.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Our customer service team is available around the clock to assist with any questions or changes to your booking.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payment Options -->
+            <div class="payment-options">
+                <h2>Flexible Payment Options</h2>
+                <div class="payment-content">
+                    <div class="payment-info">
+                        <p>We offer a variety of payment methods to suit your needs. Choose from credit cards, debit cards, PayPal, bank transfers, and more. You can also take advantage of our installment payment plans for eligible bookings.</p>
+                        
+                        <div class="installment-plans">
+                            <h3>Installment Plans</h3>
+                            <ul>
+                                <li>Pay in 3 interest-free installments</li>
+                                <li>Buy now, pay later with our partner financing options</li>
+                                <li>Flexible payment schedules to suit your budget</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">Learn More About Payment Options</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel inspiration -->
+    <section class="travel-inspiration alt-bg">
+        <div class="container">
+            <h2>Need Some Travel Inspiration?</h2>
+            <div class="inspiration-tabs">
+                <button class="inspiration-tab active" data-tab="deals">Special Deals</button>
+                <button class="inspiration-tab" data-tab="destinations">Popular Destinations</button>
+                <button class="inspiration-tab" data-tab="seasons">Seasonal Offers</button>
+            </div>
+            
+            <!-- Deals content -->
+            <div class="inspiration-content active" id="deals-content">
+                <div class="deals-container">
+                    <div class="deal-card">
+                        <div class="deal-image">
+                            <img src="London calling.jpg" alt="London Deal">
+                            <div class="deal-badge">Save 20%</div>
+                        </div>
+                        <div class="deal-content">
+                            <h3>London Calling</h3>
+                            <p class="deal-price">From $599 return</p>
+                            <p class="deal-description">Experience the vibrant capital of the UK with our exclusive spring promotion.</p>
+                            <a href="#" class="deal-link">View Deal</a>
+                        </div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-image">
+                            <img src="bangkok calling.jpg" alt="Bangkok Deal">
+                            <div class="deal-badge">Early Bird</div>
+                        </div>
+                        <div class="deal-content">
+                            <h3>Bangkok Adventure</h3>
+                            <p class="deal-price">From $689 return</p>
+                            <p class="deal-description">Book early and save on flights to Thailand's exciting capital city.</p>
+                            <a href="#" class="deal-link">View Deal</a>
+                        </div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-image">
+                            <img src="maldives calling.jpg" alt="Maldives Deal">
+                            <div class="deal-badge">Luxury Escape</div>
+                        </div>
+                        <div class="deal-content">
+                            <h3>Maldives Getaway</h3>
+                            <p class="deal-price">From $899 return</p>
+                            <p class="deal-description">Treat yourself to paradise with our special business class fares.</p>
+                            <a href="#" class="deal-link">View Deal</a>
+                        </div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-image">
+                            <img src="new york calling.jpg" alt="New York Deal">
+                            <div class="deal-badge">Flash Sale</div>
+                        </div>
+                        <div class="deal-content">
+                            <h3>New York</h3>
+                            <p class="deal-price">From $799 return</p>
+                            <p class="deal-description">Limited-time offer to the city that never sleeps.</p>
+                            <a href="#" class="deal-link">View Deal</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-deals">
+                    <a href="#" class="btn-secondary">View All Deals</a>
+                </div>
+            </div>
+            
+            <!-- Other inspiration tabs would go here -->
+        </div>
+    </section>
+
+    <!-- Booking assistance -->
+    <section class="booking-assistance">
+        <div class="container">
+            <div class="assistance-content">
+                <div class="assistance-info">
+                    <h2>Need Help With Your Booking?</h2>
+                    <p>Our dedicated team is here to assist you with any questions or special requests you may have about your booking.</p>
+                    
+                    <div class="assistance-options">
+                        <div class="assistance-option">
+                            <div class="option-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Contact Our Call Center</h3>
+                            <p>Speak with our booking specialists 24/7</p>
+                            <a href="#" class="assistance-link">View Global Contact Numbers</a>
+                        </div>
+                        
+                        <div class="assistance-option">
+                            <div class="option-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h3>Live Chat</h3>
+                            <p>Chat with our virtual assistant or get connected to an agent</p>
+                            <a href="#" class="btn-outline">Start Chat</a>
+                        </div>
+                        
+                        <div class="assistance-option">
+                            <div class="option-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h3>Visit a City Office</h3>
+                            <p>Get in-person assistance at one of our global offices</p>
+                            <a href="#" class="assistance-link">Find a City Office</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Etihad Airways</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press Centre</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Baggage Information</a></li>
+                        <li><a href="#">Special Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Site Map</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Etihad Airways. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+                                        
