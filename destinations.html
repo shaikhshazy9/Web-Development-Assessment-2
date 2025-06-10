@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etihad Airways - Destinations</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="etihad-airways-logo.png" alt="Etihad Airways Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html" class="active">Destinations</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="page-banner" style="background-image: url('background\ eti.jpg');">
+        <div class="banner-content">
+            <h1>Our Destinations</h1>
+            <p>Explore the world with Etihad Airways</p>
+        </div>
+    </section>
+
+    <!-- Destinations filter section -->
+    <section class="destination-filter">
+        <div class="container">
+            <div class="filter-controls">
+                <h2>Find Your Next Adventure</h2>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="region-filter">Region</label>
+                        <select id="region-filter">
+                            <option value="all">All Regions</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="americas">The Americas</option>
+                            <option value="middle-east">Middle East</option>
+                            <option value="africa">Africa</option>
+                            <option value="australia">Australia & Pacific</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="search-destination">Search</label>
+                        <input type="text" id="search-destination" placeholder="City or country name">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World map section -->
+    <section class="world-map">
+        <div class="container">
+            <div class="map-container">
+                <img src="Etihad_Airlines_Destinations.png" alt="World Map with Etihad Destinations" class="map-image">
+                <!-- Map pins would be positioned absolutely here -->
+                <div class="map-pin" style="top: 30%; left: 48%;" data-city="London"></div>
+                <div class="map-pin" style="top: 32%; left: 22%;" data-city="New York"></div>
+                <div class="map-pin" style="top: 65%; left: 80%;" data-city="Sydney"></div>
+                <!-- More pins would be added in real implementation -->
+            </div>
+            <p class="map-info">Click on a destination pin to learn more</p>
+        </div>
+    </section>
+
+    <!-- Featured destinations -->
+    <section class="destinations-grid">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="destinations-container">
+                <!-- Europe -->
+                <div class="destination-category" id="europe">
+                    <h3>Europe</h3>
+                    <div class="destinations-row">
+                        <div class="destination-card">
+                            <img src="london des.jpg" alt="London">
+                            <div class="destination-info">
+                                <h4>London</h4>
+                                <p>United Kingdom</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="paris.jpg" alt="Paris">
+                            <div class="destination-info">
+                                <h4>Paris</h4>
+                                <p>France</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="rome.webp" alt="Rome">
+                            <div class="destination-info">
+                                <h4>Rome</h4>
+                                <p>Italy</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asia -->
+                <div class="destination-category" id="asia">
+                    <h3>Asia</h3>
+                    <div class="destinations-row">
+                        <div class="destination-card">
+                            <img src="tokyo.jpg" alt="Tokyo">
+                            <div class="destination-info">
+                                <h4>Tokyo</h4>
+                                <p>Japan</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="bangkok.jpeg" alt="Bangkok">
+                            <div class="destination-info">
+                                <h4>Bangkok</h4>
+                                <p>Thailand</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="singapore.jpg" alt="Singapore">
+                            <div class="destination-info">
+                                <h4>Singapore</h4>
+                                <p>Singapore</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Americas -->
+                <div class="destination-category" id="americas">
+                    <h3>The Americas</h3>
+                    <div class="destinations-row">
+                        <div class="destination-card">
+                            <img src="new york.jpg" alt="New York">
+                            <div class="destination-info">
+                                <h4>New York</h4>
+                                <p>United States</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="toronto.jpg" alt="Toronto">
+                            <div class="destination-info">
+                                <h4>Toronto</h4>
+                                <p>Canada</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="sao.jpg" alt="São Paulo">
+                            <div class="destination-info">
+                                <h4>São Paulo</h4>
+                                <p>Brazil</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle East -->
+                <div class="destination-category" id="middle-east">
+                    <h3>Middle East</h3>
+                    <div class="destinations-row">
+                        <div class="destination-card">
+                            <img src="dubai.jpg" alt="Dubai">
+                            <div class="destination-info">
+                                <h4>Dubai</h4>
+                                <p>United Arab Emirates</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="doha.jpg" alt="Doha">
+                            <div class="destination-info">
+                                <h4>Doha</h4>
+                                <p>Qatar</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                        <div class="destination-card">
+                            <img src="riyadh.jpg" alt="Riyadh">
+                            <div class="destination-info">
+                                <h4>Riyadh</h4>
+                                <p>Saudi Arabia</p>
+                                <a href="#" class="btn-tertiary">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hidden categories that would be shown with JS filtering -->
+                <div class="destination-category hidden" id="africa">
+                    <!-- Africa destinations would go here -->
+                </div>
+                
+                <div class="destination-category hidden" id="australia">
+                    <!-- Australia & Pacific destinations would go here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination spotlight -->
+    <section class="destination-spotlight">
+        <div class="container">
+            <h2>Destination Spotlight</h2>
+            <div class="spotlight-content">
+                <div class="spotlight-image">
+                    <img src="abu dhabi.webp" alt="Abu Dhabi">
+                </div>
+                <div class="spotlight-info">
+                    <h3>Abu Dhabi</h3>
+                    <p class="spotlight-subtitle">The Capital of the UAE</p>
+                    <p>As our hub city, Abu Dhabi offers a perfect blend of traditional Arabian hospitality and modern luxury. From the stunning Sheikh Zayed Grand Mosque to the thrilling Ferrari World, Abu Dhabi has something for everyone.</p>
+                    <p>Explore pristine beaches, visit world-class museums, enjoy shopping in luxurious malls, or experience the tranquility of the desert just a short drive from the city center.</p>
+                    <div class="spotlight-features">
+                        <div class="feature">
+                            <i class="fas fa-sun"></i>
+                            <span>Year-round sunshine</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-utensils"></i>
+                            <span>World-class dining</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hotel"></i>
+                            <span>Luxury accommodations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mosque"></i>
+                            <span>Rich cultural heritage</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary">Plan Your Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel inspiration -->
+    <section class="travel-inspiration">
+        <div class="container">
+            <h2>Travel Inspiration</h2>
+            <div class="travel-blog-posts">
+                <div class="blog-post">
+                    <img src="top 10 uk.png" alt="Top 10 Things to Do in London">
+                    <div class="blog-content">
+                        <h3>Top 10 Things to Do in London</h3>
+                        <p class="blog-date">April 15, 2025</p>
+                        <p>Discover the best attractions and hidden gems in the British capital...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="bangkok street food.webp" alt="A Foodie's Guide to Bangkok">
+                    <div class="blog-content">
+                        <h3>A Foodie's Guide to Bangkok</h3>
+                        <p class="blog-date">March 28, 2025</p>
+                        <p>Explore the vibrant street food scene and upscale restaurants in Thailand's bustling capital...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="48 hours.jpg" alt="48 Hours in New York City">
+                    <div class="blog-content">
+                        <h3>48 Hours in New York City</h3>
+                        <p class="blog-date">February 10, 2025</p>
+                        <p>Make the most of a weekend getaway in the Big Apple with our curated itinerary...</p>
+                        <a href="#" class="blog-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="center-btn">
+                <a href="#" class="btn-secondary">View All Travel Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="etihad-airways-logo.png" alt="Etihad Airways Logo">
+                    <p>The National Airline of the United Arab Emirates</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="destinations.html">Destinations</a></li>
+                            <li><a href="fleet.html">Our Fleet</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="booking.html">Book Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>About Etihad</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Baggage Information</a></li>
+                            <li><a href="#">Special Assistance</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Etihad Airways. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="js/script.js"></script>
+</body>
+</html>
