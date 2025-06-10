@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etihad Airways - Our Fleet</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="etihad-airways-logo.png" alt="Etihad Airways Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="fleet.html" class="active">Our Fleet</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page banner -->
+    <section class="page-banner" style="background-image: url('background\ eti.jpg');">
+        <div class="banner-content">
+            <h1>Our Fleet</h1>
+            <p>Discover our modern and efficient aircraft</p>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="etihad-airways-logo.png" alt="Etihad Airways Logo">
+                    <p>The National Airline of the United Arab Emirates</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="destinations.html">Destinations</a></li>
+                            <li><a href="fleet.html">Our Fleet</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="booking.html">Book Now</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>About Etihad</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Baggage Information</a></li>
+                            <li><a href="#">Special Assistance</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Etihad Airways. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+    <!-- Fleet overview -->
+    <section class="fleet-overview">
+        <div class="container">
+            <div class="overview-content">
+                <h2>World-Class Fleet</h2>
+                <p>At Etihad Airways, we operate one of the youngest and most environmentally friendly fleets in the skies. Our aircraft are equipped with the latest technology and designed to provide maximum comfort across all travel classes.</p>
+                <div class="fleet-stats">
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Aircraft</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Years Average Age</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Fuel Efficiency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aircraft types -->
+    <section class="aircraft-types">
+        <div class="container">
+            <h2>Our Aircraft</h2>
+            
+            <!-- Aircraft tabs navigation -->
+            <div class="aircraft-tabs">
+                <button class="tab-btn active" data-target="boeing">Boeing</button>
+                <button class="tab-btn" data-target="airbus">Airbus</button>
+            </div>
+            
+            <!-- Aircraft content -->
+            <div class="aircraft-content">
+                <!-- Boeing section -->
+                <div class="aircraft-tab-content active" id="boeing-content">
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="Boeing 777-300ER photo.jpg" alt="Boeing 777-300ER">
+                        </div>
+                        <div class="aircraft-details">
+                            <h3>Boeing 777-300ER</h3>
+                            <div class="specs-container">
+                                <div class="spec">
+                                    <span class="spec-label">Range</span>
+                                    <span class="spec-value">14,690 km</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">Up to 368 passengers</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Cruising Speed</span>
+                                    <span class="spec-value">905 km/h</span>
+                                </div>
+                            </div>
+                            <p>Our Boeing 777-300ER aircraft feature spacious cabins with enhanced comfort across all classes. First Class offers private suites, Business Class provides full-flat beds, and Economy Class ensures a comfortable journey with adjustable headrests and ample legroom.</p>
+                            <a href="#" class="btn-secondary">View Seating Plan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="Boeing 787-9 Dreamliner.jpg" alt="Boeing 787-9 Dreamliner">
+                        </div>
+                        <div class="aircraft-details">
+                            <h3>Boeing 787-9 Dreamliner</h3>
+                            <div class="specs-container">
+                                <div class="spec">
+                                    <span class="spec-label">Range</span>
+                                    <span class="spec-value">14,140 km</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">Up to 290 passengers</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Cruising Speed</span>
+                                    <span class="spec-value">913 km/h</span>
+                                </div>
+                            </div>
+                            <p>The 787 Dreamliner offers a more comfortable flying experience with improved air quality, larger windows, and a smoother ride. The aircraft's advanced features include lower cabin altitude and higher humidity levels, helping to reduce the effects of jet lag.</p>
+                            <a href="#" class="btn-secondary">View Seating Plan</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Airbus section -->
+                <div class="aircraft-tab-content" id="airbus-content">
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="Airbus A380.jpg" alt="Airbus A380">
+                        </div>
+                        <div class="aircraft-details">
+                            <h3>Airbus A380</h3>
+                            <div class="specs-container">
+                                <div class="spec">
+                                    <span class="spec-label">Range</span>
+                                    <span class="spec-value">15,200 km</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">Up to 496 passengers</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Cruising Speed</span>
+                                    <span class="spec-value">945 km/h</span>
+                                </div>
+                            </div>
+                            <p>Our A380 is the epitome of luxury air travel, featuring The Residence - the world's only three-room suite on a commercial airline. The upper deck houses First and Business Class cabins, while the main deck offers a spacious Economy Class cabin.</p>
+                            <a href="#" class="btn-secondary">View Seating Plan</a>
+                        </div>
+                    </div>
+                    
+                    <div class="aircraft-card">
+                        <div class="aircraft-image">
+                            <img src="Airbus A350-1000.jpeg" alt="Airbus A350-1000">
+                        </div>
+                        <div class="aircraft-details">
+                            <h3>Airbus A350-1000</h3>
+                            <div class="specs-container">
+                                <div class="spec">
+                                    <span class="spec-label">Range</span>
+                                    <span class="spec-value">16,100 km</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Capacity</span>
+                                    <span class="spec-value">Up to 371 passengers</span>
+                                </div>
+                                <div class="spec">
+                                    <span class="spec-label">Cruising Speed</span>
+                                    <span class="spec-value">945 km/h</span>
+                                </div>
+                            </div>
+                            <p>The A350-1000 combines the latest aerodynamic design, carbon fiber fuselage and wings, and fuel-efficient Rolls-Royce engines. This aircraft offers enhanced cabin comfort with wider seats, panoramic windows, and advanced air conditioning systems.</p>
+                            <a href="#" class="btn-secondary">View Seating Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cabin features -->
+    <section class="cabin-features">
+        <div class="container">
+            <h2>Cabin Features</h2>
+            
+            <!-- Cabin class tabs -->
+            <div class="cabin-tabs">
+                <button class="cabin-tab active" data-cabin="first">First Class</button>
+                <button class="cabin-tab" data-cabin="business">Business Class</button>
+                <button class="cabin-tab" data-cabin="economy">Economy Class</button>
+            </div>
+            
+            <!-- Cabin content -->
+            <div class="cabin-content-wrapper">
+                <!-- First Class -->
+                <div class="cabin-content active" id="first-cabin">
+                 
+                    <div class="cabin-description">
+                        <h3>First Class - Ultimate Luxury</h3>
+                        <p>Experience unparalleled luxury in our First Class cabin. Each private suite offers complete privacy and features a 6'8" fully-flat bed, a personal wardrobe, and a vanity unit. Enjoy gourmet dining with our Dine Anytime service, featuring dishes created by world-renowned chefs.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Private suite with sliding doors</li>
+                            <li><i class="fas fa-check"></i> 32-inch TV with over 100 movies</li>
+                            <li><i class="fas fa-check"></i> Personal chef and butler service</li>
+                            <li><i class="fas fa-check"></i> Designer sleepwear and amenity kits</li>
+                            <li><i class="fas fa-check"></i> Shower facilities (A380 only)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Business Class -->
+                <div class="cabin-content" id="business-cabin">
+                    
+                    <div class="cabin-description">
+                        <h3>Business Class - Refined Comfort</h3>
+                        <p>Our Business Class offers a perfect blend of productivity and relaxation. The ergonomically designed seats convert into fully-flat beds, while direct aisle access ensures convenience for all passengers. Enjoy a premium dining experience with our Business Class menu.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Fully-flat bed up to 80 inches long</li>
+                            <li><i class="fas fa-check"></i> 18.5-inch touchscreen TV</li>
+                            <li><i class="fas fa-check"></i> In-seat power outlet and USB port</li>
+                            <li><i class="fas fa-check"></i> Premium noise-canceling headphones</li>
+                            <li><i class="fas fa-check"></i> Exclusive lounge access</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Economy Class -->
+                <div class="cabin-content" id="economy-cabin">
+                  
+                    <div class="cabin-description">
+                        <h3>Economy Class - Comfort for All</h3>
+                        <p>Our Economy Class cabin offers a comfortable journey with ergonomically designed seats featuring adjustable headrests and ample legroom. Enjoy our award-winning entertainment system and a variety of meal options catering to different dietary requirements.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Comfortable seats with up to 32-inch pitch</li>
+                            <li><i class="fas fa-check"></i> 11.6-inch touchscreen TV</li>
+                            <li><i class="fas fa-check"></i> USB charging port</li>
+                            <li><i class="fas fa-check"></i> Complimentary blankets and pillows</li>
+                            <li><i class="fas fa-check"></i> Multiple meal options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet innovation -->
+    <section class="fleet-innovation">
+        <div class="container">
+            <div class="innovation-content">
+                <div class="innovation-text">
+                    <h2>Innovation in the Skies</h2>
+                    <p>Etihad Airways is committed to pioneering new technologies and sustainable practices in aviation. Our fleet modernization program focuses on fuel efficiency, reduced emissions, and enhanced passenger comfort.</p>
+                    
+                    <div class="innovation-features">
+                        <div class="innovation-feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Sustainability</h3>
+                            <p>We're investing in sustainable aviation fuels and carbon offset programs to reduce our environmental footprint.</p>
+                        </div>
+                        <div class="innovation-feature">
+                            <i class="fas fa-wifi"></i>
+                            <h3>Connectivity</h3>
+                            <p>Stay connected with high-speed Wi-Fi available across our fleet, allowing you to work or keep in touch while flying.</p>
+                        </div>
+                        <div class="innovation-feature">
+                            <i class="fas fa-headphones"></i>
+                            <h3>Entertainment</h3>
+                            <p>Our E-BOX inflight entertainment system offers thousands of hours of on-demand entertainment for all ages.</p>
+                        </div>
+                        <div class="innovation-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Safety</h3>
+                            <p>Advanced safety features and rigorous maintenance protocols ensure the highest standards of safety across our fleet.</p>
+                        </div>
+                    </div>
+                </div>   
+                </section>
+                
+                <script src="script.js"></script>
+                </body>
+                </html>
